@@ -160,6 +160,9 @@ p {
 	.hero .content {
 		top: 36vw;
 	}
+	.hero .content p {
+		width: 90%;
+	}
 }
 
 .hero .content .logo {
