@@ -10,7 +10,20 @@ const Movies = () => {
   useEffect(() => {
     setLoading(true);
 
-    
+    axios.get(`https://api.themoviedb.org/3/discover/tv`, {
+      params: {
+        sort_by: 'popularity.desc',
+        api_key: 'adb2108bb82e8ee38df217c5c2dcf712'
+      }
+    })
+      .then( (response) => {
+        setLoading(false);
+        setMovies(response?.data?.results);
+      })
+      .catch( (error) => {
+        setLoading(false);
+        console.log(error);
+      })
   }, [])
 
   return (
