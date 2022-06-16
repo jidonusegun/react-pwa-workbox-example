@@ -32,6 +32,7 @@ p {
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#a6000000", endColorstr="#00000000", GradientType=0);
 	/* IE6-9 */
 	display: flex;
+	align-items: flex-start;
 	padding: 40px;
 	position: fixed;
 	top: 0;
@@ -40,18 +41,18 @@ p {
 	box-sizing: border-box;
 	z-index: 5;
 }
+.header .content {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+}
 
 .logo {
 	width: 320px;
 	height: auto;
 	margin-right: 10px;
 	transition: margin 0.125s ease;
-}
-
-@media only screen and (max-width: 600px) {
-	.logo {
-		width: 150px;
-	}
 }
 
 .logo svg {
@@ -97,13 +98,6 @@ p {
 .user-profile {
 	margin-left: auto;
 }
-
-@media only screen and (max-width: 600px) {
-	.user-profile {
-		display: none;
-	}
-}
-
 
 .user-profile .user {
 	display: flex;
@@ -154,15 +148,6 @@ p {
 	width: 500px;
 	left: 10vw;
 	top: 10vw;
-}
-
-@media only screen and (max-width: 600px) {
-	.hero .content {
-		top: 36vw;
-	}
-	.hero .content p {
-		width: 90%;
-	}
 }
 
 .hero .content .logo {
@@ -222,4 +207,108 @@ p {
 
 .button-el[data-primary=true]:hover {
 	background: #e50914;
+}
+
+@media only screen and (max-width: 600px) {
+	.logo {
+		width: 150px;
+	}
+
+	.header {
+		flex-wrap: wrap;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.hero .content {
+		top: 36vw;
+	}
+
+	.header {
+		flex-wrap: wrap;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.user-profile {
+		display: none;
+	}
+
+	.header {
+		/* flex-wrap: wrap; */
+	}
+}
+
+@media screen and (min-width: 767px) and (max-width: 1025px) {
+	.hero .content .button-wrapper {
+		display: flex;
+		width: 500px;
+		margin-top: 30px;
+	}
+
+	.header .content {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+	}
+
+	.header {
+		flex-wrap: nowrap;
+	}
+
+	.homelogo {
+		margin-top: 0rem;
+	}
+
+	.hero .content {
+		width: 500px;
+	}
+}
+
+@media screen and (min-width: 410px) and (max-width: 824px) {
+	.hero .content .button-wrapper {
+		display: flex;
+		width: 350px;
+		margin-top: 30px;
+	}
+
+	.hero .content {
+		width: 350px;
+	}
+}
+
+@media screen and (min-width: 359px) and (max-width: 640px) {
+	.hero .content .button-wrapper {
+		display: flex;
+		width: 300px;
+		margin-top: 30px;
+	}
+
+	.hero .content {
+		width: 300px;
+	}
+
+	.header {
+		flex-wrap: wrap;
+	}
+	.homelogo {
+		margin-top: 2rem;
+	}
+}
+
+@media screen and (min-width: 319px) and (max-width: 569px) {
+	.hero .content .button-wrapper {
+		display: flex;
+		width: 250px;
+		margin-top: 30px;
+	}
+
+	.hero .content {
+		width: 250px;
+	}
+
+	.header {
+		flex-wrap: wrap;
+	}
 }

@@ -12,12 +12,14 @@ const Header = () => {
           <NetflixLogo/>
         </Link>
       </div>
-      <Nav/>
-      <div className="user-profile" >
-        <div className="user">
-          <div className="name">Jidonu Segun</div>
-          <div className="image">
-            <img src="/netflix-logo.png" alt="netflix"/> 
+      <div className="content">
+        <Nav/>
+        <div className="user-profile" >
+          <div className="user">
+            <div className="name">Jidonu Segun</div>
+            <div className="image">
+              <img src="/netflix-logo.png" alt="netflix"/> 
+            </div>
           </div>
         </div>
       </div>

@@ -6,9 +6,9 @@ const Hero = () => {
   return (
     <div id="hero" className="hero">
       <div className="content">
-        <img className="logo" src={NarcosLogo} alt="website logo" />
+        <img className="logo homelogo" src={NarcosLogo} alt="website logo" />
         <h2>Season 2 now available</h2>
-        <p>
+        <p className="description">
           Lorem ipsum dolor sit amet,
           consectetur adipisicing elit. Doloremque id quam sapiente unde voluptatum alias vero debitis, magnam quis
           quod.
